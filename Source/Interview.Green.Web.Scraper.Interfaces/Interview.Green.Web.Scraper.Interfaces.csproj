@@ -7,8 +7,8 @@
     <ProjectGuid>{C37020FA-1901-499B-B4CE-5CF8CE665476}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Interview.Green.Web.Scrapper.Interfaces</RootNamespace>
-    <AssemblyName>Interview.Green.Web.Scrapper.Interfaces</AssemblyName>
+    <RootNamespace>Interview.Green.Web.Scraper.Interfaces</RootNamespace>
+    <AssemblyName>Interview.Green.Web.Scraper.Interfaces</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,10 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IBasic.cs" />
-    <Compile Include="IJobQueuedRequest.cs" />
+    <Compile Include="IJobProcessor.cs" />
+    <Compile Include="IJobProcessorFactory.cs" />
+    <Compile Include="IJobQueue.cs" />
     <Compile Include="IJobSchedulerService.cs" />
-    <Compile Include="IWebScrapService.cs" />
+    <Compile Include="JobStatus.cs" />
+    <Compile Include="JobType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

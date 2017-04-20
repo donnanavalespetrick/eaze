@@ -7,8 +7,8 @@
     <ProjectGuid>{40AA01C3-E153-4EFE-9A51-B52091703298}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Interview.Green.Web.Scrapper.Service</RootNamespace>
-    <AssemblyName>Interview.Green.Web.Scrapper.Service</AssemblyName>
+    <RootNamespace>Interview.Green.Web.Scraper.Service</RootNamespace>
+    <AssemblyName>Interview.Green.Web.Scraper.Service</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -38,6 +38,13 @@
       <HintPath>..\packages\Common.Logging.Core.3.0.0\lib\net40\Common.Logging.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Fizzler.Systems.HtmlAgilityPack">
+      <HintPath>..\packages\Fizzler.Tools.1.0.0\tools\Fizzler.Systems.HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.5, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Fizzler.Tools.1.0.0\tools\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="Quartz, Version=2.3.3.0, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
       <HintPath>..\packages\Quartz.2.3.3\lib\net40\Quartz.dll</HintPath>
       <Private>True</Private>
@@ -52,9 +59,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="JobProcessorFactory.cs" />
     <Compile Include="JobSchedulerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebScrapService.cs" />
+    <Compile Include="WebScrapeProcessor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -63,6 +71,10 @@
     <ProjectReference Include="..\Interview.Green.Web.Scraper.Interfaces\Interview.Green.Web.Scraper.Interfaces.csproj">
       <Project>{C37020FA-1901-499B-B4CE-5CF8CE665476}</Project>
       <Name>Interview.Green.Web.Scraper.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Interview.Green.Web.Scraper.Models\Interview.Green.Web.Scraper.Models.csproj">
+      <Project>{b62950eb-fd92-4d2c-ba72-ca9015c27dfb}</Project>
+      <Name>Interview.Green.Web.Scraper.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -7,8 +7,8 @@
     <ProjectGuid>{B62950EB-FD92-4D2C-BA72-CA9015C27DFB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Interview.Green.Web.Scrapper.Models</RootNamespace>
-    <AssemblyName>Interview.Green.Web.Scrapper.Models</AssemblyName>
+    <RootNamespace>Interview.Green.Web.Scraper.Models</RootNamespace>
+    <AssemblyName>Interview.Green.Web.Scraper.Models</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,9 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="JobRequest.cs" />
-    <Compile Include="JobResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebScrapeJob.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Interview.Green.Web.Scraper.Interfaces\Interview.Green.Web.Scraper.Interfaces.csproj">

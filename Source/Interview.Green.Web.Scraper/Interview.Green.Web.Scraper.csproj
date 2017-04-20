@@ -122,7 +122,20 @@
       <Private>True</Private>
     </Reference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Interview.Green.Web.Scraper.Interfaces\Interview.Green.Web.Scraper.Interfaces.csproj">
+      <Project>{c37020fa-1901-499b-b4ce-5cf8ce665476}</Project>
+      <Name>Interview.Green.Web.Scraper.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Interview.Green.Web.Scraper.Models\Interview.Green.Web.Scraper.Models.csproj">
+      <Project>{b62950eb-fd92-4d2c-ba72-ca9015c27dfb}</Project>
+      <Name>Interview.Green.Web.Scraper.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Interview.Green.Web.Scraper.Service\Interview.Green.Web.Scraper.Service.csproj">
+      <Project>{40aa01c3-e153-4efe-9a51-b52091703298}</Project>
+      <Name>Interview.Green.Web.Scraper.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\JobController.cs" />
@@ -130,6 +143,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\JobCreationException.cs" />
+    <Compile Include="ViewModel\JobCreationRequest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />

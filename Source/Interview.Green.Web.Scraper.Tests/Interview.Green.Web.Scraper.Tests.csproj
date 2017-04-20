@@ -9,8 +9,8 @@
     <ProjectGuid>{61648126-E66C-43EC-A315-3563A6F96A2D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Interview.Green.Web.Scrapper.Tests</RootNamespace>
-    <AssemblyName>Interview.Green.Web.Scrapper.Tests</AssemblyName>
+    <RootNamespace>Interview.Green.Web.Scraper.Tests</RootNamespace>
+    <AssemblyName>Interview.Green.Web.Scraper.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -38,8 +38,14 @@
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.0.0\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Moq, Version=4.7.8.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\packages\Moq.4.7.8\lib\net45\Moq.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -104,7 +110,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="JobControllerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="JobSchedulerServiceUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />
@@ -113,6 +121,18 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Interview.Green.Web.Scraper.Interfaces\Interview.Green.Web.Scraper.Interfaces.csproj">
+      <Project>{c37020fa-1901-499b-b4ce-5cf8ce665476}</Project>
+      <Name>Interview.Green.Web.Scraper.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Interview.Green.Web.Scraper.Models\Interview.Green.Web.Scraper.Models.csproj">
+      <Project>{b62950eb-fd92-4d2c-ba72-ca9015c27dfb}</Project>
+      <Name>Interview.Green.Web.Scraper.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Interview.Green.Web.Scraper.Service\Interview.Green.Web.Scraper.Service.csproj">
+      <Project>{40aa01c3-e153-4efe-9a51-b52091703298}</Project>
+      <Name>Interview.Green.Web.Scraper.Service</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Interview.Green.Web.Scraper\Interview.Green.Web.Scraper.csproj">
       <Project>{0F725E0C-7DD1-4CBB-86D8-A163E24B1CDF}</Project>
       <Name>Interview.Green.Web.Scraper</Name>
